@@ -19,7 +19,8 @@ pip.parse(
 )
 use_repo(pip, "py_deps")
 
-# Register a toolchain for Python 3.8
+# Register a toolchain for Python 3.8, which is the minimum Python version
+# supported according to docs/python_bindings.md.
 
 python = use_extension("@rules_python//python:extensions.bzl", "python")
 python.toolchain(
